@@ -8,7 +8,6 @@ class Solution:
         prefixSum = [nums[0]%k]
         for i in range(n-1):
             prefixSum.append((prefixSum[i]+nums[i+1]) % k)
-        print(prefixSum)
         reminders = dict()
         for i in range(len(prefixSum)):
             r = prefixSum[i]
@@ -16,9 +15,7 @@ class Solution:
                 return True
             if r in reminders:
                 if reminders[r] < i-1:
-                    print(reminders)
                     return True
             else:
                 reminders[r] = i
-        print(reminders)
         return False
