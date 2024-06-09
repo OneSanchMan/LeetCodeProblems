@@ -9,6 +9,5 @@ class Solution:
                 j += 1
             if j-i > 1:
                 chars[i:j] = [curChar] + list(str(j-i))
-                i += 1 + len(str(j-i))
-            else:
-                i += 1
+                i += len(str(j-i))
+            i += 1
