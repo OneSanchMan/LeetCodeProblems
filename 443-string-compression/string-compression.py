@@ -8,6 +8,7 @@ class Solution:
             while j < len(chars) and chars[j] == curChar:
                 j += 1
             if j-i > 1:
-                chars[i:j] = [curChar] + list(str(j-i))
-                i += len(str(j-i))
+                intCh = str(j-i)
+                chars[i:j] = [curChar] + list(intCh)
+                i += len(intCh)
             i += 1
