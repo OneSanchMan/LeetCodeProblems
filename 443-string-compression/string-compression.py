@@ -1,6 +1,5 @@
 class Solution:
     def compress(self, chars: List[str]) -> int:
-        curChar = ''
         i = 0
         while i < len(chars):
             curChar = chars[i]
