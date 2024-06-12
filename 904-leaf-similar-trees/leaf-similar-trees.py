@@ -20,6 +20,4 @@ class Solution:
                     if node.left:
                         q.append(node.left)
             return arr
-        arr1 = getLeafSequence(root1)
-        arr2 = getLeafSequence(root2)
-        return len(arr1) == len(arr2) and all([arr1[i] == arr2[i] for i in range(len(arr1))])
+        return getLeafSequence(root1) == getLeafSequence(root2)
